@@ -1,0 +1,40 @@
+//Variables and Mixins
+
+$primary-color: black;
+$secondary-color: white;
+
+@mixin button-style {
+   background-color: $secondary-color;
+   border-radius: 10px;
+   padding: 10px;
+   color: $primary-color;
+   
+  
+}
+
+//CSS Starts Here
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: 'Spectral', serif;
+  text-align: center;
+
+  .start {
+    @include button-style;
+  }
+
+  .hidden {
+    font-size: 3em;
+    margin-bottom: 2em;
+  }
+  
+  .actionButton {
+    @include button-style;
+  }
+}
+
+h1 {
+    margin-bottom: 2.5em;
+    font-size: 100px;
+}
